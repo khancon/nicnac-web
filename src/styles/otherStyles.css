@@ -1,0 +1,57 @@
+.navbar {
+    position: fixed; /* Fix the NavBar to the top of the screen */
+    top: 0; /* Align the top edge of the NavBar with the top of the viewport */
+    left: 0; /* Align the left edge of the NavBar with the left of the viewport */
+    right: 0; /* Ensure the NavBar spans the full width */
+    z-index: 1000; /* Ensure the NavBar is above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-dark-color); /* Example: Use your primary color */
+    color: var(--secondary-color); /* Example: Use your secondary color */
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center; /* Center the items */
+        width: 100%;
+        padding: 0; /* Remove additional padding */
+    }
+
+    .navbar-nav li {
+        width: 100%; /* Make list items full width */
+        text-align: center;
+        padding: 5px 0;
+    }
+}

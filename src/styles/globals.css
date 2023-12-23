@@ -1,0 +1,170 @@
+/* globals.css */
+
+/* Color Scheme */
+:root {
+    --primary-color: #13c2c2; /* Your primary color */
+    --primary-semi-dark-color: #08979c;
+    --primary-dark-color: #006d75; /* Darker shade of primary color */
+    --secondary-color: #ffffff; /* Your secondary color */
+    --background-color: #002329; /* Background color */
+    --text-color: #000000; /* Text color */
+    --custom-button-font-size: 15px;
+    --navbar-height: 70px;
+}
+
+/* Typography */
+body {
+    padding-top: 60px;
+    font-family: 'Source Sans Pro', sans-serif; /* Example font */
+    color: var(--text-color);
+    height: 100%; /* Ensure the html and body take full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Button Styles */
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--primary-semi-dark-color);
+}
+
+/* Custom button styles */
+.custom-button {
+    background-color: var(--primary-color); /* Using a global variable */
+    color: var(--secondary-color);
+    border: none;
+    padding: calc(var(--custom-button-font-size)* 1.25) calc(var(--custom-button-font-size) * 1.5);
+    border-radius: 10px; /* Set border-radius to 15px */
+    margin: 5px;
+    font-weight: bold; 
+    font-size: var(--custom-button-font-size); 
+    display: inline-flex; /* Use inline-flex to allow dynamic width */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    text-align: center; /* Ensure text is centered */
+    white-space: nowrap; /* Prevent text wrapping */
+    /* Add any other custom styling you need */
+}
+
+.custom-button:hover, .custom-button:focus {
+    background-color: var(--primary-semi-dark-color);
+    color: var(--secondary-color) !important;
+    padding: '25px 20px';
+}
+
+.navbar {
+    position: fixed; /* Fix the NavBar to the top of the screen */
+    top: 0; /* Align the top edge of the NavBar with the top of the viewport */
+    left: 0; /* Align the left edge of the NavBar with the left of the viewport */
+    right: 0; /* Ensure the NavBar spans the full width */
+    z-index: 1000; /* Ensure the NavBar is above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-dark-color); /* Example: Use your primary color */
+    color: var(--secondary-color); /* Example: Use your secondary color */
+    padding: 10px 10px;
+    width: 100%;
+    height: var(--navbar-height);
+    box-sizing: border-box;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust alignment */
+    /* max-width: 1200px; Example max-width */
+    width: 100%;
+    margin: 0 auto; /* Center the navbar-content */
+    /* padding: 0 40px; */
+}
+
+/* .navbar-content-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+} */
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    /* padding: 10px 10px; */
+    align-items: center;
+}
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center; /* Center the items */
+        width: 100%;
+        padding: 0; /* Remove additional padding */
+    }
+
+    .navbar-nav li {
+        width: 100%; /* Make list items full width */
+        text-align: center;
+        padding: 5px 0;
+    }
+}
+
+/* Styling for the content area that holds SideBar and VideoFeed */
+.content-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    margin-top: var(--navbar-height); /* Offset by the height of the navbar */
+    /* max-width: 1200px; */
+    height: calc(100vh - var(--navbar-height)); /* Fill the height minus navbar */
+}
+
+.sidebar {
+    width: 200px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    height: 100%; /* Fill the available height */
+    /* Other styles */
+}
+
+.video-feed {
+    width: 1000px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    height: 100%; /* Fill the available height */
+    /* Other styles */
+}
+
+
+
+
