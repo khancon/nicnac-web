@@ -35,7 +35,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/store'; // Adjust the path to your store
 // import { Button as AntdButton } from 'antd';
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 // import CustomButton from './components/Button'
 import './App.css'; // Include if you have App-specific CSS
 import HomeFeed from './components/HomeFeed';
@@ -48,8 +48,8 @@ function HomeScreen() {
   // };
 
   return (
-    <div style={styles.container}>
-      <NavBar/>
+    <div>
+      {/* <NavBar/> */}
       <HomeFeed/>
       {/* <HomeScreen/> */}
       {/* <p style={{color: '#ffffff'}}>Home Screen</p>
@@ -82,7 +82,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    backgroundColor: '#1f1f1f',
+    // backgroundColor: '#1f1f1f',
   },
   text: {
     // Additional styles for the text if needed
