@@ -16,7 +16,7 @@
 body {
     padding-top: 60px;
     font-family: 'Source Sans Pro', sans-serif; /* Example font */
-    color: var(--text-color);
+    /* color: var(--text-color); */
     height: 100%; /* Ensure the html and body take full viewport height */
     margin: 0;
     padding: 0;
