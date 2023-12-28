@@ -1,4 +1,4 @@
-/* globals.css */
+/* src/styles/globals.css */
 
 /* Color Scheme */
 :root {
@@ -31,7 +31,7 @@ body {
     background-color: var(--primary-color);
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
 
 .button:hover {
@@ -40,7 +40,7 @@ body {
 
 /* Custom button styles */
 .custom-button {
-    background-color: var(--primary-color); /* Using a global variable */
+    background-color: var(--primary-semi-dark-color); /* Using a global variable */
     color: var(--secondary-color);
     border: none;
     padding: calc(var(--custom-button-font-size)* 1.25) calc(var(--custom-button-font-size) * 1.5);
