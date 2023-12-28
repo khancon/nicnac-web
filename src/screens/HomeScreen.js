@@ -1,6 +1,5 @@
-// HomeScreen.js
-import * as React from 'react';
 //src/screens/HomeScreen.js
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -14,20 +13,14 @@ const HomeScreen = ({ toggleTheme, currentTheme }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    setOpen(!open); // Toggle the open state
   };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-
-  // const toggleTheme = () => setThemeMode(themeMode === 'light' ? 'dark' : 'light'); // Toggle theme mode
 
   return (
       <Box sx={{ display: 'flex' }}>
           <CssBaseline />
-          <NicNacAppBar open={open} handleDrawerOpen={handleDrawerOpen} toggleTheme={toggleTheme} currentTheme={currentTheme} />
-          <NicNacSideDrawer open={open} handleDrawerClose={handleDrawerClose} />
+          <NicNacAppBar handleDrawerOpen={handleDrawerOpen} toggleTheme={toggleTheme} currentTheme={currentTheme} />
+          <NicNacSideDrawer open={open} handleDrawerClose={() => setOpen(false)} />
           <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
               <DrawerHeader />
               <Typography paragraph>

@@ -14,27 +14,25 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import SearchBar from './SearchBar';
 import Divider from '@mui/material/Divider';
 
-const drawerWidth = 240;
-
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
+})(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
+//   transition: theme.transitions.create(['width', 'margin'], {
+//     easing: theme.transitions.easing.sharp,
+//     duration: theme.transitions.duration.leavingScreen,
+//   }),
+//   ...(open && {
+//     marginLeft: drawerWidth,
+//     width: `calc(100% - ${drawerWidth}px)`,
+//     transition: theme.transitions.create(['width', 'margin'], {
+//       easing: theme.transitions.easing.sharp,
+//       duration: theme.transitions.duration.enteringScreen,
+//     }),
+//   }),
 }));
 
-const NicNacAppBar = ({ open, handleDrawerOpen, toggleTheme, currentTheme }) => {
+const NicNacAppBar = ({ handleDrawerOpen, toggleTheme, currentTheme }) => {
     const [showLogin, setShowLogin] = React.useState(true); // State to toggle components
 
     const toggleComponent = () => {
@@ -42,7 +40,7 @@ const NicNacAppBar = ({ open, handleDrawerOpen, toggleTheme, currentTheme }) => 
     };
 
     return (
-        <AppBar position="fixed" elevation={0} open={open}>
+        <AppBar position="fixed" elevation={0}>
             <Toolbar>
                 <IconButton
                     color="inherit"
@@ -51,7 +49,6 @@ const NicNacAppBar = ({ open, handleDrawerOpen, toggleTheme, currentTheme }) => 
                     edge="start"
                     sx={{
                     marginRight: 5,
-                    ...(open && { display: 'none' }),
                     }}
                 >
                     <MenuIcon />
